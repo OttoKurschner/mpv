@@ -359,6 +359,11 @@ const struct filter_kernel mp_filter_kernels[] = {
     // Blur paramater picked to match orthogonal and diagonal contributions
     {{"haasnsoft", 3.2383154841662362, jinc, .blur = 1.11, .resizable = true},
           .polar = true, .window = "hanning"},
+    {{"ewa_hammingsharp", 3, jinc, .blur = 0.92640757661460680516124510232308881340858865043368961921534504829075435903081769020461540181205493,
+          .resizable = true}, .polar = true, .window = "hamming"},
+    {{"ewa_hammingsoft", 3.47663096833247241529984846311778404555917726469073364277733595158897611712791271357290795178300834,
+          jinc, .blur = 1.07359242338539319483875489767691118659141134956631038078465495170924564096918230979538459818794506,
+          .resizable = true}, .polar = true, .window = "hamming"},
     // Cubic filters
     {{"bicubic",        2,   bicubic}},
     {{"bcspline",       2,   cubic_bc, .params = {0.5, 0.5} }},
